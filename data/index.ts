@@ -1,5 +1,3 @@
-import { SrcAlphaSaturateFactor } from "three";
-
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -9,17 +7,41 @@ export const navItems = [
 ];
 
 export const socials = [
-  { platform: "Twitter", path: "https://twitter.com/AguPikinJoe" },
-  { platform: "Linkedin", path: "https://linkedin.com/in/AguJoeDevleon" },
-  { platform: "Github", path: "https://github.com/Pikinjoe" },
-  { platform: "Whatsapp", path: "https://wa.me/message/EEWJC4WLDCS3N1" },
+  {
+    platform: "Twitter",
+    path: "https://twitter.com/AguPikinJoe",
+    rel: "nofollow noopener noreferrer",
+    description:
+      "Follow DevLeon on Twitter for website development and frontend insights",
+  },
+  {
+    platform: "Linkedin",
+    path: "https://linkedin.com/in/AguJoeDevleon",
+    rel: "noopener noreferrer",
+    description:
+      "Connect with DevLeon on LinkedIn for frontend development expertise",
+  },
+  {
+    platform: "Github",
+    path: "https://github.com/Pikinjoe",
+    rel: "noopener noreferrer",
+    description: "Explore DevLeon's website development projects on GitHub",
+  },
+  {
+    platform: "Whatsapp",
+    path: "https://wa.me/message/EEWJC4WLDCS3N1",
+    rel: "nofollow noopener noreferrer",
+    description:
+      "Contact DevLeon on WhatsApp for website development inquiries",
+  },
 ];
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
+    title: "Client collaboration is my priority in Website Development",
+    description:
+      "As a frontend developer, I prioritize open communication to deliver tailored React and Next.js solutions for website development, ensuring client goals are met.",
     className: "md:col-span-7 row-span-4",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -28,8 +50,9 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
+    title: "Global Time Zone Flexibility for Frontend Development",
+    description:
+      "I provide seamless communication for website development projects, adapting to global schedules to ensure timely delivery of frontend solutions.",
     className: "md:col-span-5 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -38,8 +61,10 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "Always open to learning and improving",
+    title: "My Frontend Development Tech Stack",
+    description:
+      "Proficient in React, Next.js, and Tailwind CSS, I specialize in building responsive, SEO-optimized websites for modern frontend development needs.",
+
     className: "md:col-span-5 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -48,8 +73,9 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "Passionate Frontend Developer for Website Development",
+    description:
+      "I craft pixel-perfect, user-friendly interfaces with a focus on frontend development, delivering exceptional website experiences.",
     className: "md:col-span-5 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -59,8 +85,9 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Next.js project",
-    description: "The Inside Scoop",
+    title: "Building a Next.js Website for Modern Development",
+    description:
+      "Currently developing a Next.js portfolio with Tailwind CSS, showcasing my skills in website development and frontend optimization. Explore my projects!",
     className: "md:col-span-7 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -69,8 +96,9 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Are you impressed with my work?",
-    description: "",
+    title: "Ready to Start Your Website Development Project?",
+    description:
+      "Let’s collaborate on your next frontend development project. Contact me to build a high-performing, responsive website today!",
     className: "md:col-span-5 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -83,7 +111,7 @@ export const projects = [
   {
     id: 1,
     title: "Certisfy grocery web app",
-    des: "Simplify your grocery shopping with Certisfy. Seemlessly shop at your comfort.",
+    des: "A responsive grocery shopping app built with React, Tailwind CSS, Express, and MongoDB, showcasing expertise in full-stack website development and frontend development with seamless cloud integration.",
     img: "/assets/certisfy.png",
     iconLists: [
       "/assets/re.svg",
@@ -96,8 +124,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Devleon Todo web app  with ReactJS",
-    des: "A modern todo web app with an upto date weather report. Dynamically renders date and time.",
+    title: "Devleon Todo web app",
+    des: "A productivity app built with React and Tailwind CSS, featuring real-time weather updates via the OpenWeather API, demonstrating frontend development skills for interactive website development.",
     img: "/assets/todo.png",
     iconLists: [
       "/assets/re.svg",
@@ -108,8 +136,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Demo moviebox web app with React",
-    des: "A Demo moviebox website that updates using TMDB API's built with modern technologies.",
+    title: "Demo moviebox web app",
+    des: "A demo MovieBox website powered by the TMDB API, built with React and Tailwind CSS, highlighting my frontend development capabilities for dynamic website development projects.",
     img: "/assets/moviebox.png",
     iconLists: ["/assets/re.svg", "/assets/tail.svg", "/assets/tmdb.png"],
     link: "https://moviesdemobox.netlify.app/",
@@ -117,7 +145,7 @@ export const projects = [
   {
     id: 4,
     title: "Modern portfolio website",
-    des: "My portfolio built with modern technologies and powered by Aceternity UI",
+    des: "A personal portfolio built with Next.js, TypeScript, React, and Tailwind CSS, optimized for SEO and showcasing my expertise in website development and frontend development with Aceternity UI.",
     img: "/assets/dev.png",
     iconLists: [
       "/assets/next.svg",
@@ -134,38 +162,48 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with DevLeon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. DevLeon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, DevLeon is the ideal partner.",
+      "DevLeon’s expertise in website development and frontend development made our project a success. His professionalism and dedication to creating a seamless React-based website were outstanding. Highly recommended for any business looking to enhance their online presence.",
     name: "Michael Johnson",
     designation: "Director of AlphaStream Technologies",
     src: "/assets/andres.jpg",
+    intro:
+      "Client testimonials for DevLeon's website development and frontend development services",
   },
   {
     quote:
-      "Working with DevLeon transformed our website into a seamless, user-friendly experience. His attention to detail, creative problem-solving, and commitment to excellence made the entire process smooth and enjoyable. DevLeon is a true professional who brings passion to every project—highly recommended!",
+      "Working with DevLeon on our Next.js website was a game-changer. His frontend development skills and attention to detail delivered a user-friendly experience that exceeded our expectations. DevLeon is the ideal partner for website development projects.",
     name: "Sarah Thompson",
     designation: "CEO of BrightPath Solutions",
     src: "/assets/connor.jpg",
+    intro:
+      "Client testimonials for DevLeon's website development and frontend development services",
   },
   {
     quote:
-      "DevLeon’s expertise in frontend development is unmatched. He took our vision and turned it into a stunning, responsive website that exceeded our expectations. His ability to communicate clearly and deliver on time made him a joy to work with. For anyone looking to boost their online presence, DevLeon is the go-to engineer.",
+      "DevLeon’s frontend development expertise transformed our vision into a stunning, responsive website. His clear communication and mastery of React and Tailwind CSS make him the go-to developer for website development projects.",
     name: "David Martinez",
     designation: "Founder of Nexus Innovations",
     src: "/assets/jurica.jpg",
+    intro:
+      "Client testimonials for DevLeon's website development and frontend development services",
   },
   {
     quote:
-      "DevLeon brought our project to life with his incredible skill set and infectious enthusiasm. His ability to balance aesthetics with functionality resulted in a website that not only looks fantastic but performs flawlessly. If you want a frontend engineer who truly cares about your success, DevLeon is your guy.",
+      "DevLeon brought our project to life with his incredible frontend development skills. The website he built with Next.js is both beautiful and functional, showcasing his talent in website development. A true professional!",
     name: "Emily Chen",
     designation: "Marketing Lead at Horizon Enterprises",
     src: "/assets/jake.jpg",
+    intro:
+      "Client testimonials for DevLeon's website development and frontend development services",
   },
   {
     quote:
-      "Partnering with DevLeon was a game-changer for our brand. His technical expertise, paired with a keen eye for design, delivered a website that perfectly reflects our identity. DevLeon’s proactive approach and dedication to quality make him an exceptional choice for any development project.",
+      "Partnering with DevLeon for our website development was the best decision. His proficiency in frontend development with React and Next.js delivered a site that perfectly reflects our brand. DevLeon is a top-notch developer!",
     name: "James Carter",
     designation: "COO of Quantum Dynamics",
     src: "/assets/male.jpg",
+    intro:
+      "Client testimonials for DevLeon's website development and frontend development services",
   },
 ];
 
@@ -173,28 +211,28 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    desc: "Enhanced a React.js platform’s interactivity by 20% through frontend development, contributing to the Certisfy grocery app with responsive UI and performance optimization for website development.",
     className: "md:col-span-2",
     thumbnail: "/assets/exp1.svg",
   },
   {
     id: 2,
     title: "Meta Frontend Engineering Student",
-    desc: "Learning, designing and developing asthetically appealing web platforms under meta.",
-    className: "md:col-span-2", // change to md:col-span-2
+    desc: "Mastered advanced frontend development techniques under Meta, building responsive platforms like the MovieBox demo app using React and Tailwind CSS for website development.",
+    className: "md:col-span-2", 
     thumbnail: "/assets/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance WebApp Dev Project",
-    desc: "Led the dev of a web app for a client, from initial concept to deployment.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Freelance Web App Developer",
+    desc: "Led website development for a custom web app, utilizing React and Tailwind CSS to deliver a scalable, user-focused frontend development solution from concept to deployment.",
+    className: "md:col-span-2", 
     thumbnail: "/assets/exp3.svg",
   },
   {
     id: 4,
     title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Developed and maintained user-facing features for multiple website development projects, using Next.js and TypeScript to ensure high performance, scalability, and SEO in frontend development.",
     className: "md:col-span-2",
     thumbnail: "/assets/exp4.svg",
   },

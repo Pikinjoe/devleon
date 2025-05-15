@@ -1,14 +1,21 @@
 import { projects } from "@/data";
-import { div } from "motion/react-client";
 import React from "react";
 import { PinContainer } from "./ui/3dPin";
 import { FaLocationArrow } from "react-icons/fa6";
+import Head from "next/head";
 
 const Projects = () => {
   return (
     <div className="py-20 " id="projects">
+      <Head>
+        <title>Projects by DevLeon | Frontend Developer</title>
+        <meta
+          name="description"
+          content="Explore DevLeon's frontend development projects, including React and Next.js applications like Certisfy and MovieBox."
+        />
+      </Head>
       <h1 className="heading text-white/80">
-        A selection of <span className="purple"> recent projects</span>
+        My <span className="purple"> recent projects</span>
       </h1>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10 text-white/80">
@@ -18,6 +25,23 @@ const Projects = () => {
             className="lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:h-[41rem] sm:w-[570px] w-[80vw]"
           >
             <PinContainer title={link} href={link}>
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "CreativeWork",
+                    name: title,
+                    description: des,
+                    url: link,
+                    image: img,
+                    author: {
+                      "@type": "Person",
+                      name: "Agu Joe Chukwuebuka",
+                    },
+                  }),
+                }}
+              />
               <div className="relative flex items-center justify-center sm:w-[570] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <img src="/assets/bg.png" alt="bg-img" />
@@ -45,12 +69,18 @@ const Projects = () => {
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-center items-center">
+                <a
+                  href={link || "/"}
+                  rel="noopener noreferrer"
+                  aria-label={`Visit live site for ${title}`}
+                  target="_blank"
+                  className="flex justify-center items-center  cursor-pointer"
+                >
                   <p className="flex lg:text-xl md:text-xs text-sm purple">
                     Check live site
                   </p>
                   <FaLocationArrow className="ms-3" color="#cbabf9" />
-                </div>
+                </a>
               </div>
             </PinContainer>
           </div>

@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
-import { div, span } from "motion/react-client";
 import { FaHtml5, FaReact, FaCopy } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
@@ -58,6 +57,7 @@ export const BentoGridItem = ({
   const handleCopy = () => {
     navigator.clipboard.writeText("devleoncode@gmail.com");
     setCopied(true);
+    setTimeout(() => setCopied(false), 3000);
   };
 
   return (
@@ -106,7 +106,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 group-hover/bento:z-50 transition duration-200 relative md:h-full flex flex-col px-5 p-5 lg:p-10 z-50"
           )}
         >
-          <div className="font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base z-10">
+          <div className="font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base z-20">
             {description}
           </div>
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 text-white/80 z-50 ">

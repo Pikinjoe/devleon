@@ -4,6 +4,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaPhone, FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { socials } from "@/data";
+import Head from "next/head";
 
 const platformIcons: { [key: string]: React.ReactNode } = {
   Twitter: <FaXTwitter />,
@@ -15,14 +16,34 @@ const platformIcons: { [key: string]: React.ReactNode } = {
 const Footer = () => {
   return (
     <div className="w-full pb-10" id="contact">
+      <Head>
+        <title>Contact DevLeon | Frontend Developer</title>
+        <meta
+          name="description"
+          content="Get in touch with DevLeon, a frontend developer specializing in React and Next.js, to discuss your web development project."
+        />
+      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Agu Joe Chukwuebuka",
+            email: "devleoncode@gmail.com",
+            telephone: "+2348165069358",
+            url: "https://devleoncode.netlify.app/",
+            sameAs: socials.map((s) => s.path),
+          }),
+        }}
+      />
       <div className="flex flex-col items-center">
         <h1 className="text-white/80 heading">
-          Ready to take your <span className="purple">online and digital </span>
-          presence to the next level
+          Elevate Your <span className="purple">Digital Presence</span> Today
         </h1>
         <p className="text-white/60 md:mt-10 my-5 text-center">
-          Reach out to me today let's discuss how I can help you achieve your
-          goals.
+          Contact me to discuss how my frontend development expertise can bring
+          your vision to life with React and Next.js.
         </p>
 
         <div className="flex gap-4 items-center">
@@ -54,7 +75,8 @@ const Footer = () => {
               href={social.path}
               key={social.platform}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={social.rel}
+              aria-label={social.description}
             >
               <TailwindcssButtons
                 title=""

@@ -1,21 +1,58 @@
 "use client";
 import React from "react";
-
+import Head from "next/head";
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/CanvasReveal";
 
 const Process = () => {
   return (
     <div className="w-full pb-20">
+      <Head>
+        <title>DevLeon's Development Process | Frontend Developer</title>
+        <meta
+          name="description"
+          content="Discover DevLeon's frontend development process, from planning to launch, using React, Next.js, and Tailwind CSS."
+        />
+      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "DevLeon's Frontend Development Process",
+            step: [
+              {
+                "@type": "HowToStep",
+                name: "Planning & Strategy",
+                description:
+                  "Collaborate to define website goals, target audience, and features, using tools like Figma for structure and navigation.",
+              },
+              {
+                "@type": "HowToStep",
+                name: "Development & Updates",
+                description:
+                  "Code responsive interfaces with React and Next.js, providing regular progress updates to ensure alignment.",
+              },
+              {
+                "@type": "HowToStep",
+                name: "Build & Launch",
+                description:
+                  "Develop functional code, test for performance, and launch an SEO-optimized website with Tailwind CSS.",
+              },
+            ],
+          }),
+        }}
+      />
       <h1 className="heading text-white/80">
-        My <span className="purple"> Process</span>
+        My <span className="purple"> Frontend Development </span> Process
       </h1>
 
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          description="Collaborate to define website goals, target audience, and features, using tools like Figma for structure and navigation."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -23,9 +60,9 @@ const Process = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Development & Updates"
           icon={<AceternityIcon order="Phase 2" />}
-          description="Once we agree on the plan, I dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+          description="Code responsive interfaces with React and Next.js, providing regular progress updates to ensure alignment."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -38,9 +75,9 @@ const Process = () => {
           />
         </Card>
         <Card
-          title="Development & Launch"
+          title="Build & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+          description="Develop functional code, test for performance, and launch an SEO-optimized website with Tailwind CSS."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -70,6 +107,10 @@ const Card = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2] lg:h-[35rem] max-w-sm w-full mx-auto p-4 relative"
+      role="region"
+      aria-label={`Process step: ${title}`}
+      tabIndex={0}
+      onKeyDown={(e) => e.key === "Enter" && setHovered(!hovered)}
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />

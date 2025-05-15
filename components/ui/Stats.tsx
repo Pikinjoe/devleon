@@ -1,6 +1,5 @@
 "use client";
 
-import { div } from "motion/react-client";
 import CountUp from "react-countup";
 
 const stats = [

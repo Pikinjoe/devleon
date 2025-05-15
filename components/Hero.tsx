@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Head from "next/head";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import TailwindcssButtons from "./ui/TailwindcssButtons";
@@ -24,7 +25,27 @@ const platformIcons: { [key: string]: React.ReactNode } = {
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36" id="home">
+    <div className="pb-10 pt-36" id="home">
+      <Head>
+        <title>DevLeon | Frontend Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Explore DevLeon's portfolio, showcasing expertise in React, Next.js, and Tailwind CSS for building responsive, user-friendly web applications."
+        />
+      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Agu Joe Chukwuebuka",
+            jobTitle: "Frontend Developer",
+            url: "https://devleoncode.netlify.app/",
+            sameAs: socials.map((s) => s.path),
+          }),
+        }}
+      />
       <Spotlight />
       <section className="">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
@@ -40,9 +61,13 @@ const Hero = () => {
                   Agu Joe Chukwuebuka
                 </span>
               </h1>
-              <TextGenerateEffect words="A Frontend Developer Crafting Responsive, Pixel-Perfect User Interfaces" />
+              <TextGenerateEffect words="A Frontend Developer Crafting Responsive, Pixel-Perfect Web Interfaces" />
               <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
-                <a href="/Resume.pdf" download>
+                <a
+                  href="/Resume.pdf"
+                  download
+                  aria-label="Download DevLeon's CV"
+                >
                   <TailwindcssButtons
                     title="Download CV"
                     icon={<FaDownload />}
@@ -56,7 +81,8 @@ const Hero = () => {
                       href={social.path}
                       key={social.platform}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={social.rel}
+                      aria-label={social.description}
                     >
                       <TailwindcssButtons
                         title=""
@@ -92,7 +118,7 @@ const Hero = () => {
                     priority
                     quality={100}
                     fill
-                    alt="Devleon photo"
+                    alt="Agu Joe Chukwuebuka, Frontend Developer"
                     className="object-contain rounded-full"
                   />
                 </motion.div>
