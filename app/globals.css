@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black: #000000;
+  --black-100: #000319;
+  --black-200: rgba(17, 25, 40, 0.75);
+  --black-300: rgba(255, 255, 255, 0.125);
+  --white: #ffffff;
+  --white-100: #bec1dd;
+  --white-200: #c1c2d3;
+  --blue: #3b82f6;
+  --blue-100: #e4ecff;
+  --purple: #cbacf9;
+  --pink: #ec4899;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.black { color: var(--black); }
+.black-100 { color: var(--black-100); }
+.black-200 { color: var(--black-200); }
+.black-300 { color: var(--black-300); }
+.white { color: var(--white); }
+.white-100 { color: var(--white-100); }
+.white-200 { color: var(--white-200); }
+.blue { color: var(--blue); }
+.blue-100 { color: var(--blue-100); }
+.purple { color: var(--purple); }
+
+.bg-black { background-color: var(--black); }
+.bg-black-100 { background-color: var(--black-100); }
+.bg-black-200 { background-color: var(--black-200); }
+.bg-black-300 { background-color: var(--black-300); }
+.bg-white { background-color: var(--white); }
+.bg-white-100 { background-color: var(--white-100); }
+.bg-white-200 { background-color: var(--white-200); }
+.bg-blue { background-color: var(--blue); }
+.bg-blue-100 { background-color: var(--blue-100); }
+.bg-purple { background-color: var(--purple); }
+
+.violet-gradient {
+  background: linear-gradient(90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.gradient-text-purple-pink {
+  background: linear-gradient(90deg, var(--purple) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-purple-violet {
+  background: linear-gradient(90deg, var(--purple) 0%, #a855f7 100%);
+  color: transparent;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--black-100) 0%,
+    var(--white-100) 20%,
+    var(--black-100) 40%
+  );
+  background-size: 200% 100%;
+}
+
+@layer base {
+  .heading {
+    @apply text-3xl md:text-5xl text-center font-bold;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  h1 {
+    @apply text-2xl md:text-4xl font-bold;
+  }
+  h2 {
+    @apply text-[36px] md:text-[48px] font-semibold;
+  }
+  h3 {
+    @apply text-[20px] md:text-[24px] font-semibold;
+  }
 }
