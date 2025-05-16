@@ -11,6 +11,7 @@ import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import TailwindcssButtons from "./TailwindcssButtons";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -75,10 +76,14 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
-              alt={img}
-              className={cn(imgClassName, "object-center, object-contain")}
+              alt={`${title || "Grid Item"} background`}
+              width={700}
+              height={400}
+              className={cn(imgClassName, "object-center object-contain")}
+              style={{ objectFit: "contain" }}
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
           )}
         </div>
@@ -88,10 +93,14 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
-              alt={spareImg}
-              className={"object-center, object-contain w-full h-full"}
+              alt={`${title || "Grid Item"} secondary image`}
+              width={200}
+              height={200}
+              className="object-center object-contain w-full h-full"
+              style={{ objectFit: "contain" }}
+              sizes="200px"
             />
           )}
         </div>
@@ -120,7 +129,7 @@ export const BentoGridItem = ({
                 {[<FaHtml5 />, <FaReact />, <SiTypescript />].map(
                   (item, index) => (
                     <span
-                      key={index}
+                      key={`left-${index}`}
                       className="lg:p-2 p-1 opacity-50 lg:opacity-100 rounded-full flex justify-center items-center text-white/80 bg-[#10132e]"
                     >
                       {item}
@@ -138,7 +147,7 @@ export const BentoGridItem = ({
                   <IoLogoJavascript />,
                 ].map((item, index) => (
                   <span
-                    key={index}
+                    key={`right-${index}`}
                     className="lg:p-2 p-1 opacity-50 lg:opacity-100 rounded-full flex justify-center items-center text-white/80 bg-[#10132e]"
                   >
                     {item}

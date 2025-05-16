@@ -2,12 +2,13 @@ import { workExperience } from "@/data";
 import React from "react";
 import { Button } from "./ui/MovingBorder";
 import Head from "next/head";
+import Image from "next/image";
 
 const Experience = () => {
   return (
     <div className="pb-20">
       <Head>
-        <title>DevLeon's Work Experience | Frontend Developer</title>
+        <title>{"DevLeon's Work Experience | Frontend Developer"}</title>
         <meta
           name="description"
           content="Explore DevLeon's professional experience as a frontend developer, including roles in React and Next.js projects."
@@ -29,7 +30,7 @@ const Experience = () => {
         }}
       />
       <h1 className="heading text-white/80">
-        My work<span className="purple"> experience</span>
+        My work <span className="purple"> experience</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -42,10 +43,14 @@ const Experience = () => {
             aria-label={`Experience: ${card.title}`}
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
+              <Image
                 src={card.thumbnail}
-                alt={card.thumbnail}
+                alt={`${card.title} thumbnail`}
+                width={128}
+                height={128}
                 className="lg:w-32 md:w-20 w-16"
+                 style={{ width: "100%", height: "auto" }}
+                sizes="(max-width: 768px) 16vw, 20vw"
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">

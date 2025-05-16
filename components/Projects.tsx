@@ -3,6 +3,7 @@ import React from "react";
 import { PinContainer } from "./ui/3dPin";
 import { FaLocationArrow } from "react-icons/fa6";
 import Head from "next/head";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -44,9 +45,24 @@ const Projects = () => {
               />
               <div className="relative flex items-center justify-center sm:w-[570] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <img src="/assets/bg.png" alt="bg-img" />
+                  <Image
+                    src="/assets/bg.png"
+                    alt="Background"
+                    width={570}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 80vw, 570px"
+                  />
                 </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0" />
+                <Image
+                  src={img}
+                  alt={`${title} screenshot`}
+                  width={570}
+                  height={400}
+                  style={{ objectFit: "contain" }}
+                  sizes="(max-width: 768px) 80vw, 570px"
+                  className="z-10 absolute bottom-0"
+                />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
@@ -65,7 +81,15 @@ const Projects = () => {
                         transform: `translateX(-${5 * index * 2}px)`,
                       }}
                     >
-                      <img src={icon} alt={icon} className="p-2" />
+                      <Image
+                        src={icon}
+                        alt={`${title} tech icon ${index + 1}`}
+                        width={40}
+                        height={40}
+                        style={{ width: "100%", height: "auto" }}
+                        sizes="40px"
+                        className="p-2"
+                      />
                     </div>
                   ))}
                 </div>

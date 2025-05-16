@@ -17,7 +17,7 @@ const Testimonies = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            testimonials.map(({ quote, name, designation }) => ({
+            testimonials.map(({ quote, name }) => ({
               "@context": "https://schema.org",
               "@type": "Review",
               reviewBody: quote,

@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1 className="text-white h1">
-                Hi, I'm{" "}
+                Hi, I\'m 
                 <span className="gradient-text-purple-pink">
                   Agu Joe Chukwuebuka
                 </span>

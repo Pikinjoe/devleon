@@ -8,7 +8,7 @@ const Process = () => {
   return (
     <div className="w-full pb-20">
       <Head>
-        <title>DevLeon's Development Process | Frontend Developer</title>
+        <title>{"DevLeon\'s Development Process | Frontend Developer"}</title>
         <meta
           name="description"
           content="Discover DevLeon's frontend development process, from planning to launch, using React, Next.js, and Tailwind CSS."
@@ -160,7 +160,12 @@ const AceternityIcon = ({ order }: { order: string }) => {
   );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+interface IconProps {
+  className?: string;
+  [key: string]: unknown; 
+}
+
+export const Icon = ({ className, ...rest }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

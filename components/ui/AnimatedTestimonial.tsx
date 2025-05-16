@@ -2,6 +2,7 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 
@@ -32,6 +33,7 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 10000);
@@ -79,13 +81,15 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <img
+                  <Image
                     src={testimonial.src}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name} portrait`}
                     width={500}
                     height={500}
+                    style={{ objectFit: "cover", objectPosition: "top" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="h-full w-full rounded-3xl"
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-top"
                   />
                 </motion.div>
               ))}

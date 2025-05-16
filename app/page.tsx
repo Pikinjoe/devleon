@@ -7,7 +7,6 @@ import Projects from "@/components/Projects";
 import Testimonies from "@/components/Testimonies";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
-import { FaHome } from "react-icons/fa";
 
 
 export default function Home() {
