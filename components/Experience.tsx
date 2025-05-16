@@ -46,11 +46,10 @@ const Experience = () => {
               <Image
                 src={card.thumbnail}
                 alt={`${card.title} thumbnail`}
-                width={128}
-                height={128}
+                width={62}
+                height={62}
                 className="lg:w-32 md:w-20 w-16"
-                 style={{ width: "100%", height: "auto" }}
-                sizes="(max-width: 768px) 16vw, 20vw"
+                
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">

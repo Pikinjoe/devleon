@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { AnimatedTestimonials } from "./ui/AnimatedTestimonial";
+import { AnimatedTestimonials } from "./ui/AnimatedTestimonials";
 import { testimonials } from "@/data";
 
 const Testimonies = () => {
