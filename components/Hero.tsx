@@ -48,6 +48,9 @@ const Hero = () => {
       />
       <Spotlight />
       <section className="">
+        <Image 
+        src="/assets/devleon.jpg" priority quality={100} width={62} height={62} alt="devleon logo"
+         />
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
           <div className="flex gap-4 items-center justify-center order-2 lg:order-none">
             <div className="flex flex-col justify-center items-center mt-5 self-start">
@@ -56,7 +59,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1 className="text-white h1">
-                Hi, I\'m 
+                {`Hi, I\'m `}
                 <span className="gradient-text-purple-pink">
                   Agu Joe Chukwuebuka
                 </span>

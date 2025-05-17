@@ -203,7 +203,7 @@ const ShaderMaterial = ({
     }
     lastFrameTime = timestamp;
 
-    const material: any = ref.current.material;
+    const material = ref.current.material as THREE.ShaderMaterial;
     const timeLocation = material.uniforms.u_time;
     timeLocation.value = timestamp;
   });
@@ -212,12 +212,11 @@ const ShaderMaterial = ({
     const preparedUniforms: { [key: string]: THREE.Uniform } = {};
 
     for (const uniformName in uniforms) {
-      const uniform: any = uniforms[uniformName];
+      const uniform = uniforms[uniformName] as UniformValue;
 
       switch (uniform.type) {
         case "uniform1f":
-                   preparedUniforms[uniformName] = new THREE.Uniform(uniform.value);
-
+          preparedUniforms[uniformName] = new THREE.Uniform(uniform.value);
           break;
         case "uniform3f":
           preparedUniforms[uniformName] = new THREE.Uniform(
@@ -225,18 +224,17 @@ const ShaderMaterial = ({
           );
           break;
         case "uniform1fv":
-                    preparedUniforms[uniformName] = new THREE.Uniform(uniform.value);
-
+          preparedUniforms[uniformName] = new THREE.Uniform(uniform.value);
           break;
         case "uniform3fv":
-           preparedUniforms[uniformName] = new THREE.Uniform(
+          preparedUniforms[uniformName] = new THREE.Uniform(
             (uniform.value as number[][]).map((v) =>
               new THREE.Vector3().fromArray(v)
             )
           );
           break;
         case "uniform2f":
-           preparedUniforms[uniformName] = new THREE.Uniform(
+          preparedUniforms[uniformName] = new THREE.Uniform(
             new THREE.Vector2().fromArray(uniform.value as number[])
           );
           break;
@@ -278,6 +276,7 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size.width, size.height, source]);
 
   return (
