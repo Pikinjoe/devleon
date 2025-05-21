@@ -13,6 +13,9 @@ import animationData from "@/data/confetti.json";
 import TailwindcssButtons from "./TailwindcssButtons";
 import Image from "next/image";
 
+const leftIcons = [FaHtml5, FaReact, SiTypescript];
+const rightIcons = [RiNextjsFill, RiTailwindCssFill, IoLogoJavascript];
+
 export const BentoGrid = ({
   className,
   children,
@@ -126,31 +129,25 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 p-4">
               <div className="flex flex-col gap-1 lg:gap-3">
-                {[<FaHtml5 />, <FaReact />, <SiTypescript />].map(
-                  (item, index) => (
-                    <span
-                      key={`left-${index}`}
-                      className="lg:p-2 p-1 opacity-50 lg:opacity-100 rounded-full flex justify-center items-center text-white/80 bg-[#10132e]"
-                    >
-                      {item}
-                    </span>
-                  )
-                )}
+                {leftIcons.map((Icon, index) => (
+                  <span
+                    key={`left-icon-${index}`}
+                    className="lg:p-2 p-1 opacity-50 lg:opacity-100 rounded-full flex justify-center items-center text-white/80 bg-[#10132e]"
+                  >
+                    <Icon />
+                  </span>
+                ))}
                 <span className="p-3 rounded-full text-center bg-[#10132e]" />
               </div>
 
               <div className="flex flex-col gap-1 lg:gap-3">
                 <span className="p-3 rounded-full text-center bg-[#10132e]" />
-                {[
-                  <RiNextjsFill />,
-                  <RiTailwindCssFill />,
-                  <IoLogoJavascript />,
-                ].map((item, index) => (
+                {rightIcons.map((Icon, index) => (
                   <span
-                    key={`right-${index}`}
+                    key={`right-icon-${index}`}
                     className="lg:p-2 p-1 opacity-50 lg:opacity-100 rounded-full flex justify-center items-center text-white/80 bg-[#10132e]"
                   >
-                    {item}
+                    <Icon />
                   </span>
                 ))}
               </div>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef, ComponentType, ReactNode, } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -7,15 +7,17 @@ import {
   useMotionValue,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
 import { cn } from "@/lib/utils";
+import type { JSX } from "react";
 
-type ElementType = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+type ElementType =
+  | keyof JSX.IntrinsicElements
+  | ComponentType<React.PropsWithChildren<Record<string, unknown>>>;
 
 export function Button({
   borderRadius = "1.75rem",
   children,
-  as: Component = "button",
+  as: ElementType = "button",
   containerClassName,
   borderClassName,
   duration,
@@ -23,7 +25,7 @@ export function Button({
   ...otherProps
 }: {
   borderRadius?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   as?: ElementType;
   containerClassName?: string;
   borderClassName?: string;
@@ -31,17 +33,18 @@ export function Button({
   className?: string;
   [key: string]: unknown;
 }) {
-  return (
-    <Component
-      className={cn(
+
+  return React.createElement(
+      ElementType,
+      {
+      className: cn(
         "relative overflow-hidden bg-transparent p-[1px] text-xl md:col-span-2",
         containerClassName
-      )}
-      style={{
-        borderRadius: borderRadius,
-      }}
-      {...otherProps}
-    >
+      ),
+      style: { borderRadius },
+      ...otherProps,
+    },
+    <>
       <div
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
@@ -67,8 +70,8 @@ export function Button({
       >
         {children}
       </div>
-    </Component>
-  );
+    </> 
+  )
 }
 
 export const MovingBorder = ({
@@ -84,7 +87,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: unknown;
 }) => {
-  const pathRef = useRef<SVGRectElement>();
+  const pathRef = useRef<SVGRectElement | null>(null); 
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {

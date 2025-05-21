@@ -212,7 +212,10 @@ const ShaderMaterial = ({
     const preparedUniforms: { [key: string]: THREE.Uniform } = {};
 
     for (const uniformName in uniforms) {
-      const uniform = uniforms[uniformName] as UniformValue;
+const uniform = uniforms[uniformName] as {
+  value: number | number[] | number[][];
+  type: string;
+};
 
       switch (uniform.type) {
         case "uniform1f":
@@ -280,7 +283,7 @@ const ShaderMaterial = ({
   }, [size.width, size.height, source]);
 
   return (
-    <mesh ref={ref as any}>
+    <mesh ref={ref}>
       <planeGeometry args={[2, 2]} />
       <primitive object={material} attach="material" />
     </mesh>
