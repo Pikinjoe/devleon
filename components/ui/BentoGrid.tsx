@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
@@ -57,6 +58,11 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("devleoncode@gmail.com");
@@ -157,16 +163,18 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
-                  }}
-                />
+                {isClient && (
+                  <Lottie
+                    options={{
+                      loop: copied,
+                      autoplay: copied,
+                      animationData,
+                      rendererSettings: {
+                        preserveAspectRatio: "xMidYMid slice",
+                      },
+                    }}
+                  />
+                )}
               </div>
               <TailwindcssButtons
                 title={copied ? "Email copied" : "Copy my email"}
