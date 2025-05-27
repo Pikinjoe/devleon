@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
@@ -8,11 +9,13 @@ import { FaHtml5, FaReact, FaCopy } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
-import Lottie from "react-lottie";
-import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import TailwindcssButtons from "./TailwindcssButtons";
 import Image from "next/image";
+
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 const leftIcons = [FaHtml5, FaReact, SiTypescript];
 const rightIcons = [RiNextjsFill, RiTailwindCssFill, IoLogoJavascript];
@@ -58,11 +61,6 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("devleoncode@gmail.com");
@@ -163,7 +161,6 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
-                {isClient && (
                   <Lottie
                     options={{
                       loop: copied,
@@ -174,7 +171,6 @@ export const BentoGridItem = ({
                       },
                     }}
                   />
-                )}
               </div>
               <TailwindcssButtons
                 title={copied ? "Email copied" : "Copy my email"}
