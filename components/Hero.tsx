@@ -48,11 +48,11 @@ const Hero = () => {
       />
       <Spotlight />
       <section className="">
-        <p className="gradient-text-purple-pink text-2xl font-bold shadow-2xl transition-transform skew-6 mb-5">DevLeon</p>
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
-          <div className="flex gap-4 items-center justify-center order-2 lg:order-none">
+          <div className="order-2 lg:order-none">
+          <div className="flex gap-4 items-center justify-center ">
             <div className="flex flex-col justify-center items-center mt-5 self-start">
-              <div className="w-5 h-5 rounded-full gradient-purple-violet" />
+              <div className="w-5 h-5 rounded-full gradient-purple-violet"  />
               <div className="w-1 h-52 gradient-purple-violet" />
             </div>
             <div className="flex flex-col justify-center items-center">
@@ -63,7 +63,10 @@ const Hero = () => {
                 </span>
               </h1>
               <TextGenerateEffect words="A Frontend Developer Crafting Responsive, Pixel-Perfect Web Interfaces" />
-              <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
+            </div>
+
+          </div>
+          <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
                 <a
                   href="/Resume.pdf"
                   download
@@ -95,7 +98,6 @@ const Hero = () => {
                   ))}
                 </div>
               </div>
-            </div>
           </div>
           <div className="order-1 lg:order-none">
             <div className="relative h-full w-full">
