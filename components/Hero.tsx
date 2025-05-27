@@ -68,7 +68,7 @@ const Hero = () => {
           </div>
           <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
                 <a
-                  href="/Resume.pdf"
+                  href="/Devleon-resume.pdf"
                   download
                   aria-label="Download DevLeon's CV"
                 >
