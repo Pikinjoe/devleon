@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
