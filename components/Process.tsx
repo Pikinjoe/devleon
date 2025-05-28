@@ -106,6 +106,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onTouchStart={() => setHovered((prev) => !prev)}
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2] lg:h-[35rem] max-w-sm w-full mx-auto p-4 relative"
       role="region"
       aria-label={`Process step: ${title}`}
