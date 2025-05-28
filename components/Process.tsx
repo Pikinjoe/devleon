@@ -130,14 +130,14 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center group-active/canvas-card:-translate-y-4 group-active/canvas-card:opacity-0">
           {icon}
         </div>
-        <h2 className="text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
+        <h2 className="text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center group-active/canvas-card:opacity-100 group-active/canvas-card:text-white group-active/canvas-card:-translate-y-2">
           {title}
         </h2>
         <h2
-          className="text-white/80 text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          className="text-white/80 text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center  group-active/canvas-card:opacity-100 group-active/canvas-card:text-white group-active/canvas-card:-translate-y-2"
           style={{ color: "#e4ecff" }}
         >
           {description}

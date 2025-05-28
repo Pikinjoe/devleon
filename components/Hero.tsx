@@ -76,7 +76,7 @@ const Hero = () => {
                     title="Download CV"
                     icon={<FaDownload />}
                     position="right"
-                    otherClasses="px-3 text-white text-sm hover:text-slate-950 hover:bg-pink-500"
+                    otherClasses="px-3 text-white text-sm hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
                   />
                 </a>
                 <div className="flex gap-2">
@@ -92,7 +92,7 @@ const Hero = () => {
                         title=""
                         icon={platformIcons[social.platform]}
                         position="left"
-                        otherClasses="p-4 lg:text-xl text-white hover:text-slate-950 hover:bg-pink-500"
+                        otherClasses="p-4 lg:text-xl text-white hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
                       />
                     </a>
                   ))}
