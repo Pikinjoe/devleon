@@ -165,7 +165,7 @@ export const testimonials = [
       "DevLeon’s expertise in website development and frontend development made our project a success. His professionalism and dedication to creating a seamless React-based website were outstanding. Highly recommended for any business looking to enhance their online presence.",
     name: "Michael Johnson",
     designation: "Director of AlphaStream Technologies",
-    src: "/assets/andres.jpg",
+    src: "/assets/man1.jpeg",
     intro:
       "Client testimonials for DevLeon's website development and frontend development services",
   },
@@ -174,7 +174,7 @@ export const testimonials = [
       "Working with DevLeon on our Next.js website was a game-changer. His frontend development skills and attention to detail delivered a user-friendly experience that exceeded our expectations. DevLeon is the ideal partner for website development projects.",
     name: "Sarah Thompson",
     designation: "CEO of BrightPath Solutions",
-    src: "/assets/connor.jpg",
+    src: "/assets/woman1.jpeg",
     intro:
       "Client testimonials for DevLeon's website development and frontend development services",
   },
@@ -183,7 +183,7 @@ export const testimonials = [
       "DevLeon’s frontend development expertise transformed our vision into a stunning, responsive website. His clear communication and mastery of React and Tailwind CSS make him the go-to developer for website development projects.",
     name: "David Martinez",
     designation: "Founder of Nexus Innovations",
-    src: "/assets/jurica.jpg",
+    src: "/assets/man2.jpeg",
     intro:
       "Client testimonials for DevLeon's website development and frontend development services",
   },
@@ -192,7 +192,7 @@ export const testimonials = [
       "DevLeon brought our project to life with his incredible frontend development skills. The website he built with Next.js is both beautiful and functional, showcasing his talent in website development. A true professional!",
     name: "Emily Chen",
     designation: "Marketing Lead at Horizon Enterprises",
-    src: "/assets/jake.jpg",
+    src: "/assets/woman2.jpeg",
     intro:
       "Client testimonials for DevLeon's website development and frontend development services",
   },
