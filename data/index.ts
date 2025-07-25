@@ -140,7 +140,7 @@ export const projects = [
     des: "A tech company website, built with NextJS, AceternityUI and Tailwind CSS, highlighting my frontend development capabilities for dynamic website development projects.",
     img: "/assets/devtech.png",
     iconLists: ["/assets/next.svg", "/assets/tail.svg", "/assets/aceternity.png"],
-    link: "https://devleontecnology.netlify.app/",
+    link: "https://devleontechnology.netlify.app/",
   },
   {
     id: 4,
