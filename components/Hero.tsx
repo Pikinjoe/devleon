@@ -50,54 +50,53 @@ const Hero = () => {
       <section className="">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
           <div className="order-2 lg:order-none">
-          <div className="flex gap-4 items-center justify-center ">
-            <div className="flex flex-col justify-center items-center mt-5 self-start">
-              <div className="w-5 h-5 rounded-full gradient-purple-violet"  />
-              <div className="w-1 h-52 gradient-purple-violet" />
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="text-white h1">
-                {`Hi, I\'m `}
-                <span className="gradient-text-purple-pink">
-                  Agu Joe Chukwuebuka
-                </span>
-              </h1>
-              <TextGenerateEffect words="A Frontend Developer Crafting Responsive, Pixel-Perfect Web Interfaces" />
-            </div>
-
-          </div>
-          <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
-                <a
-                  href="/Devleon-resume.pdf"
-                  download
-                  aria-label="Download DevLeon's CV"
-                >
-                  <TailwindcssButtons
-                    title="Download CV"
-                    icon={<FaDownload />}
-                    position="right"
-                    otherClasses="px-3 text-white text-sm hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
-                  />
-                </a>
-                <div className="flex gap-2">
-                  {socials.map((social) => (
-                    <a
-                      href={social.path}
-                      key={social.platform}
-                      target="_blank"
-                      rel={social.rel}
-                      aria-label={social.description}
-                    >
-                      <TailwindcssButtons
-                        title=""
-                        icon={platformIcons[social.platform]}
-                        position="left"
-                        otherClasses="p-4 lg:text-xl text-white hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
-                      />
-                    </a>
-                  ))}
-                </div>
+            <div className="flex gap-4 items-center justify-center ">
+              <div className="flex flex-col justify-center items-center mt-5 self-start">
+                <div className="w-5 h-5 rounded-full gradient-purple-violet" />
+                <div className="w-1 h-52 gradient-purple-violet" />
               </div>
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="text-white h1">
+                  {`Hi, I\'m `}
+                  <span className="gradient-text-purple-pink">
+                    Agu Joe Chukwuebuka
+                  </span>
+                </h1>
+                <TextGenerateEffect words="A Frontend Developer Crafting Responsive, Pixel-Perfect Web Interfaces" />
+              </div>
+            </div>
+            <div className="mt-4 flex flex-col gap-4 lg:gap-10 items-center justify-center sm:flex-row">
+              <a
+                href="/Devleon-resume.pdf"
+                download
+                aria-label="Download DevLeon's CV"
+              >
+                <TailwindcssButtons
+                  title="Download CV"
+                  icon={<FaDownload />}
+                  position="right"
+                  otherClasses="px-3 text-white text-sm hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
+                />
+              </a>
+              <div className="flex gap-2">
+                {socials.map((social) => (
+                  <a
+                    href={social.path}
+                    key={social.platform}
+                    target="_blank"
+                    rel={social.rel}
+                    aria-label={social.description}
+                  >
+                    <TailwindcssButtons
+                      title=""
+                      icon={platformIcons[social.platform]}
+                      position="left"
+                      otherClasses="p-4 lg:text-xl text-white hover:text-slate-950 hover:bg-pink-500 active:bg-pink-500 active:text-slate-950"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="order-1 lg:order-none">
             <div className="relative h-full w-full">

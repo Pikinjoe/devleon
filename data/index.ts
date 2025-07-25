@@ -136,11 +136,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Demo moviebox web app",
-    des: "A demo MovieBox website powered by the TMDB API, built with React and Tailwind CSS, highlighting my frontend development capabilities for dynamic website development projects.",
-    img: "/assets/moviebox.png",
-    iconLists: ["/assets/re.svg", "/assets/tail.svg", "/assets/tmdb.png"],
-    link: "https://moviesdemobox.netlify.app/",
+    title: "Devleon Technology",
+    des: "A tech company website, built with NextJS, AceternityUI and Tailwind CSS, highlighting my frontend development capabilities for dynamic website development projects.",
+    img: "/assets/devtech.png",
+    iconLists: ["/assets/next.svg", "/assets/tail.svg", "/assets/aceternity.png"],
+    link: "https://devleontecnology.netlify.app/",
   },
   {
     id: 4,
